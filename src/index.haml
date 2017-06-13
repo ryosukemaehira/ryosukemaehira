@@ -5,3 +5,143 @@
     %title HAPPY BIRTH DAY TO ME
     %link{:rel => "stylesheet", :href => "./css/style.css"}/
   %body
+    .wrapper
+      %header.header
+        .header__left
+          %h1.header__title Happy Birthday To Me
+          %p.header__small-text
+            あと数時間で誕生日やっちゅーのにだれも連絡をよこしてこんので、
+            %br/
+            25歳になる自分のために自分で作っちゃった特設サイト
+      %section.section-keyvisual
+        .keyvisual__inner.text-center
+          %h1.keyvisual__main-title
+            %img{:src => "./images/title.png", :alt => ""}/
+          %p.keyvisual__introduction
+            と、いうわけで、
+            %span.text-underline
+              家と職場を募集します！
+          %button.keyvisual__scroll-toggle
+
+      %section.section-core-message
+        .section__inner
+          %h1.core-message デザイン会社さん、探しています。あと、シェアハウスも。
+        %p.small-comment.text-white
+          これね…最近facebookで流行ってる、グラデーションのやつね…。
+
+      %section.section-chat
+        .section__inner.l-container
+          .section__heading.text-center
+            %h1 みなさんの声が、僕への最高のバースデープレゼントです。
+            %p まじめに探しているので、お心当たりある方は連絡お待ちしております。
+          .chat__content
+            %ul.l-list-row
+              %li
+                .chat__item
+                  %img.chat__message{:src => "./images/chat-01.svg", :alt => ""}
+                  %p
+                    という
+                    %span.text-yellow><
+                      優しい方
+                  %a.btn.btn--yellow.chat-conversion{:href => ""}
+                    連絡してみる
+              %li
+                .chat__item
+                  %img.chat__message{:src => "./images/chat-02.svg", :alt => ""}
+                  %p
+                    という
+                    %span.text-red><
+                      企業の方
+                  %a.btn.btn--red.chat-conversion{:href => ""}
+                    連絡してみる
+      %section.section-about-me
+        .section__inner.l-container
+          .section__heading.text-center
+            %h1 自己紹介します
+            %p はじめまして、前平と申します。
+          .about-me__content
+            %ul.l-list-row
+              %li
+                .about-me__item--left.profile
+                  %p.kana Maehira Ryosuke
+                  %h2.name 前平 亮祐
+                  %p.description
+                    25年前の6月14日生まれ。
+                    %br/
+                    WEB中心のデザイナー。
+                    %br/
+                    高校卒業時に、「どこでも生きていける人間にならないと、死ぬ。」と悟り、大学時代は旅と語学に明け暮れる。風呂敷一枚で1年間海外を放浪し、帰国後、社会人として行きていくすべを身につけるべく、プログラミングとデザインを始める。スペイン語とフランス語が話せるらしい。
+                  %img.message{:src => "./images/profile_message.png", :alt => ""}/
+              %li
+                %ul.pinned-cards
+                  %li
+                    %h3 にんげん面
+                    %p
+                      旅好きなので、旅のお供にぜひ。
+                      %br/
+                      荷物が超コンパクトでフットワーク軽めです。
+                  %li
+                    %h3 しごと面
+                    %p
+                      スキルセット: HTML5 / CSS3 / JavaScript /
+                      %br/
+                      ターミナルとか、環境構築には耐性があります。
+                      %br/
+                      その他、デザインのことなら、なんでもやります。
+
+      %section.section-history
+        .section__inner.l-container
+          .section__heading.text-center
+            %h1 こうなった経緯
+            %p 25歳になったこのタイミングで、緊急事態発生っす。
+          .history__content
+            %ul.l-list-row
+              %li
+                .history__item
+                  %h2.text-underline.yellow シンプルに、7月から家がない。
+                  %p 渋谷界隈で、面白いシェアハウス探しています。年度末にシェアハウスの解散してから、まあそれはそれは色々ありまして、とりあえず7月から住む家が無いので、シェアハウスでもいいし、間貸しでもいいっす。料理が好きなので、定期的にそこそこ美味しいご飯作りますよ！
+                  %a.btn.btn--yellow.chat-conversion{:href => ""}
+                    連絡してみる
+
+              %li
+                .history__item
+                  %h2.text-underline.red もっとデザインに浸りたい。
+                  %p 直近一年間は、ベンチャー企業でインハウスデザイナーをやってきたのですが、最近はもうどっぷりデザインに浸かりたいなと思っていまして、デザイナーさんがたくさんいる、制作会社とか、デザイン事務所を希望しております。
+                  %br/
+                  企業様じゃなくても、こんな会社知ってるよ！って言う方、ぜひご一報ください。モリモリ働きます。
+                  %a.btn.btn--red.chat-conversion{:href => ""}
+                    連絡してみる
+
+      %section.section-company-form
+        .section__inner.l-container
+          .section__heading.text-center
+            %h1 マジすか、従業員として俺を･･･
+            %p
+              本当にありがとうございます。
+              %br/
+              ぜひ一度、お話させてください。
+          .company-form__content
+            %form.form{:action => ""}
+              .form__fields
+                .form__label 企業名
+                %input.form__input__text{:type => "text"}/
+
+      %section.section-house-form
+        .section__inner.l-container
+          .section__heading.text-center
+            %h1 マジすか、ルームメイトとして俺を･･･
+            %p
+              本当にありがとうございます。
+              %br/
+              ぜひ一度、おじゃまさせてください。
+          .house-form__content
+
+      %section.section-amazon
+        .section__inner.l-container
+          .section__heading.text-center
+            %h1 最後に、amazonのほしいものリスト公開しますね
+          .amazon__content
+            %p.text-center
+              あ、住所無くなるから、無理やわ・・・。
+              %br/
+              シェアボタンだけ、置いとくね。

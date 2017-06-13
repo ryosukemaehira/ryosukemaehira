@@ -1,10 +1,12 @@
 $main-navy: #001B49;
 $l-navy: #002B71;
-$accent-color: #DAFF41;
+$yellow: #E5DC11;
+$red: #EF5245;
 $text-color: #262626;
 $text-gray: #C8C8C8;
 $bg-gray: #F5F7F9;
 $white: #fff;
+$header-color: #363636;
 
 $layout-gutter: 15px;
 
@@ -17,6 +19,10 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  font-family: avenir, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;
+}
+
 @media(max-width: 767px) {
   html {
     font-size: 50%;
@@ -26,7 +32,7 @@ html {
 body {
   font-size: 1.6rem;
   color: $text-color;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 
 body * {
@@ -79,6 +85,176 @@ a {
   cursor: pointer;
 
   &:hover {
-    color: $accent-color;
+  
+  }
+}
+
+
+
+
+
+
+
+.form {
+
+  &--bg-white  {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 3px 15px 0 rgba(0,0,0,0.15);
+  }
+
+  &__fields {
+    margin-bottom: 24px;
+    display: flex;
+    @media(max-width: 992px) {
+      display: block;
+    }
+  }
+
+  &__label {
+    display: block;
+    padding: 12px 12px 12px 0;
+    font-weight: bold;
+    -webkit-flex-basis: 240px;
+    flex-basis: 240px;
+
+    &--required {
+      position: relative;
+
+      &:after {
+        position: absolute;
+        right: 12px;
+        top: 9px;
+        content: "必須";
+        display: inline-block;
+        color: #333;
+        font-size: 1.1rem;
+        line-height: 18px;
+        padding-top: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-weight: normal;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  &__input{
+    &--text {
+      height: 40px;
+      border: 1px solid #CDCDCD;
+      box-shadow: inset 0 1px 4px 0 rgba(0,0,0,0.10);
+      border-radius: 3px;
+      width: 100%;
+      padding: 0 12px;
+
+      &:hover {
+        border-color: $red;
+      }
+
+      &:focus{
+        border-color: $red;
+      }
+    }
+
+    &--text-lg {
+      height: 120px;
+      padding-top: 12px;
+    }
+  }
+}
+
+@media(max-width: 992px) {
+  .form {
+    width: auto;
+    &--bg-white {
+      padding: 24px;
+    }
+  }
+}
+
+
+input[type=radio], input[type=checkbox] {
+  display: none;
+}
+
+.form__input--radio, .checkbox {
+  box-sizing: border-box;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  position: relative;
+  display: inline-block;
+  margin: 0 12px 8px 0;
+  padding: 12px 12px 12px 42px;
+  border-radius: 3px;
+  background-color: $bg-gray;
+  vertical-align: middle;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $bg-gray;
+    &:after {
+      border-color: $red;
+    }
+  }
+
+  &:after {
+    -webkit-transition: border-color 0.2s linear;
+    transition: border-color 0.2s linear;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    display: block;
+    margin-top: -10px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #bbb;
+    border-radius: 50%;
+    content: '';
+  }
+}
+.form__input--radio {
+  font-size: 1.4rem;
+  &:before {
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    display: block;
+    margin-top: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $red;
+    content: '';
+    opacity: 0;
+    input[type=radio]:checked + & {
+      opacity: 1;
+    }
+  }
+}
+
+.checkbox {
+  &:before {
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+    position: absolute;
+    top: 50%;
+    left: 21px;
+    display: block;
+    margin-top: -7px;
+    width: 5px;
+    height: 9px;
+    border-right: 3px solid $red;
+    border-bottom: 3px solid $red;
+    content: '';
+    opacity: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    input[type=checkbox]:checked + & {
+      opacity: 1;
+    }
   }
 }
