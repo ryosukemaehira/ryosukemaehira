@@ -1,0 +1,84 @@
+$main-navy: #001B49;
+$l-navy: #002B71;
+$accent-color: #DAFF41;
+$text-color: #262626;
+$text-gray: #C8C8C8;
+$bg-gray: #F5F7F9;
+$white: #fff;
+
+$layout-gutter: 15px;
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media(max-width: 767px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  color: $text-color;
+  letter-spacing: 0.05em;
+}
+
+body * {
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+p, h1, h2, h3, h4, h5, h6, ul, li, th, td, dt, dd {
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+small {
+  font-size: 0.8em;
+}
+
+
+img {
+  vertical-align: baseline;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $accent-color;
+  }
+}
