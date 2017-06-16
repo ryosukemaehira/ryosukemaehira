@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+%html{:lang => "ja"}
+  %head
+    %meta{:charset => "UTF-8"}/
+    %title PORTOFOLIO
+    %link{:rel => "stylesheet", :href => "./css/style.css"}/
+    %link{:rel => "stylesheet", :href => "//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"}/
+  %body
+    .wrapper
+      %header.header
+        .header__left
+          .header__logo
+            %a{:href => "/"}
+              %img.logo{:src => "./images/main-title.svg", :alt => ""}/
+        .header__right
+          %ul.header__nav
+            %li
+              %a{:href => "/profile.html"}
+                %img{:src => "./images/menu-profile.svg", :alt => "profile"}/
+            %li
+              %a{:href => "//ryosukemaehira.hatenablog.com/", :target => 'blanc'}
+                %img{:src => "./images/menu-blog.svg", :alt => "blog"}/
+      .centered-contents.page-profile#profile
+        %header.page-heading.centered
+          %h1 PROFILE
+        .thmbnail-box
+          .thmbnail-box__left
+            %img{:src => "./images/profile.png", :alt => ""}/
+          .thmbnail-box__right
+            %p.kana.text-gray Maehira Ryosuke
+            %h2.name 前平 亮祐
+            %p.job.font-nexa
+              %img{:src => "./images/Web_designer.svg", :alt => ""}
+        .profile-text
+          1992年生まれ。高校卒業時、東日本大震災をきっかけに、「人は、いつでも簡単に住む場所を奪われる」と気づき、どこでも生きて行ける最強の人間になると決める。大学時代は旅と語学に明け暮れ、風呂敷一枚で一年間海外を放浪。
+          %br/
+          帰国後は、社会的に生きる必要性を感じ、プログラミングとデザインに明け暮れる。
+          %br/
+          趣味は料理。特技はリュック一つでとこでも生活すること。
+          %br/
+          ミニマリスト。
+          %br/
+          %br/
+          %a{:href => "/"}
+            過去の制作は
+            %span.portfolio-link><
+              こちら
+            から。
+          %br/
+    %footer.footer
+      .footer__inner.text-center
+        %p.footer__text copyright 2017 ryosukemaehira.com
+        %a{:href => "//www.facebook.com/ryosuke.maehira?ref=br_rs", :target => 'blanc'}
+          %i.fa.fa-facebook-official facebook
+        %a{:href => "//twitter.com/tabi_ryosuke"}
+          %i.fa.fa-twitter Twitter

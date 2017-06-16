@@ -1,14 +1,13 @@
-$main-navy: #001B49;
-$l-navy: #002B71;
-$yellow: #E5DC11;
-$red: #EF5245;
 $text-color: #262626;
 $text-gray: #C8C8C8;
-$bg-gray: #F5F7F9;
 $white: #fff;
 $header-color: #363636;
 
 $layout-gutter: 15px;
+$header-height: 80px;
+$space-lg: 80px;
+
+$footer-height: 80px;
 
 body, html {
   margin: 0;
@@ -20,7 +19,9 @@ html {
 }
 
 body {
-  font-family: avenir, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media(max-width: 767px) {
@@ -30,9 +31,10 @@ body {
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: $text-color;
-  letter-spacing: 0.08em;
+  line-height: 1.7;
+  letter-spacing: 0.2em;
 }
 
 body * {
@@ -44,7 +46,6 @@ body * {
 }
 
 p, h1, h2, h3, h4, h5, h6, ul, li, th, td, dt, dd {
-  line-height: 1.5;
   margin: 0;
   padding: 0;
 }
@@ -52,14 +53,16 @@ p, h1, h2, h3, h4, h5, h6, ul, li, th, td, dt, dd {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
   line-height: 1;
+  font-weight: normal;
 }
 
 h1 {
-  font-size: 3.2rem;
+  font-size: 2.8rem;
+  font-weight: bold;
 }
 
 h2 {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
 }
 
 h3 {
@@ -149,11 +152,11 @@ a {
       padding: 0 12px;
 
       &:hover {
-        border-color: $red;
+        border-color: #000;
       }
 
       &:focus{
-        border-color: $red;
+        border-color: #000;
       }
     }
 
@@ -187,14 +190,14 @@ input[type=radio], input[type=checkbox] {
   margin: 0 12px 8px 0;
   padding: 12px 12px 12px 42px;
   border-radius: 3px;
-  background-color: $bg-gray;
+  background-color: #fafafa;
   vertical-align: middle;
   cursor: pointer;
 
   &:hover {
-    background-color: $bg-gray;
+    background-color: #fafafa;
     &:after {
-      border-color: $red;
+      border-color: #000;
     }
   }
 
@@ -226,7 +229,7 @@ input[type=radio], input[type=checkbox] {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: $red;
+    background-color: #000;
     content: '';
     opacity: 0;
     input[type=radio]:checked + & {
@@ -246,8 +249,8 @@ input[type=radio], input[type=checkbox] {
     margin-top: -7px;
     width: 5px;
     height: 9px;
-    border-right: 3px solid $red;
-    border-bottom: 3px solid $red;
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
     content: '';
     opacity: 0;
     -webkit-transform: rotate(45deg);
