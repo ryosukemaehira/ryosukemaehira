@@ -1,0 +1,9 @@
+.u-show-sm {
+  display: none;
+}
+
+@media(max-width: 768px) {
+  .u-show-sm {
+    display: block;
+  }
+}

@@ -1,0 +1,116 @@
+@media(max-width: 768px) {
+  .header {
+
+    &__left {
+      margin-left: 15px;
+
+      img.logo {
+      }
+    }
+
+    &__title {
+    }
+
+    &__small-text {
+    }
+
+    &__right {
+      margin-right: 15px;
+    }
+
+    &__navigation-toggle {
+      z-index: 9999;
+      position: relative;
+      span {
+        display: block;
+        margin-bottom: 5px;
+        width: 22px;
+        height: 0;
+        border-bottom: 2px solid $text-color;
+      }
+      &.closeBtn {
+        span:nth-of-type(1){
+          -webkit-transform: translateY(7px)  rotate(45deg);
+          -moz-transform: translateY(7px) rotate(45deg);
+          -ms-transform: translateY(7px) rotate(45deg);
+          -o-transform: translateY(7px) rotate(45deg);
+          transform: translateY(7px) rotate(45deg);
+        }
+        span:nth-of-type(2){
+          opacity: 0.1;
+        }
+        span:nth-of-type(3){
+          -webkit-transform: translateY(-7px)  rotate(-45deg);
+          -moz-transform: translateY(-7px) rotate(-45deg);
+          -ms-transform: translateY(-7px) rotate(-45deg);
+          -o-transform: translateY(-7px) rotate(-45deg);
+          transform: translateY(-7px) rotate(-45deg);
+        }
+      }
+    }
+
+    &__nav {
+      z-index: 0;
+      position: absolute;
+      bottom: 100px;
+      right: -15px;
+      width: 100vw;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      /*right: auto;*/
+      transition: 0.3s bottom ease 0s;
+      -webkit-transition: 0.3s bottom ease 0s;
+      -moz-transition: 0.3s bottom ease 0s;
+      -ms-transition: 0.3s bottom ease 0s;
+      -o-transition: 0.3s bottom ease 0s;
+      background-color: rgba(255, 255, 255, 1);
+      -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+
+      li {
+        display: block;
+        img {
+        }
+      }
+      &.open {
+        display: block;
+        position: absolute;
+        /*right: 0;*/
+        bottom: -80px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+      }
+    }
+  }
+
+
+  .page-profile {
+    padding: 60px 15px 0;
+
+
+    &.centered-contents{
+    }
+
+    .thmbnail-box {
+      &__left {
+        img {
+        }
+      }
+      &__right {
+        .kana {
+        }
+        .name {
+        }
+      }
+    }
+
+    .profile-text {
+      width: 100%;
+      .portfolio-link {
+      }
+    }
+  }
+}
+
+

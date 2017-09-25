@@ -2,8 +2,10 @@
 %html{:lang => "ja"}
   %head
     %meta{:charset => "UTF-8"}/
-    %title PORTOFOLIO
+    %title projects | ryosukemaehira.com
     %link{:rel => "stylesheet", :href => "./css/style.css"}/
+    %link{:rel => "stylesheet", :href => "//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"}/
+    %meta{ :content => "width=device-width, initial-scale=1", :name => "viewport"}/
   %body
     .wrapper
       %header.header
@@ -12,7 +14,11 @@
             %a{:href => "/"}
               %img.logo{:src => "./images/main-title.svg", :alt => ""}/
         .header__right
-          %ul.header__nav
+          .header__navigation-toggle.u-show-sm#js-havigation-trigger
+            %span
+            %span
+            %span
+          %ul.header__nav#js-havigation-sm
             %li
               %a{:href => "/profile.html"}
                 %img{:src => "./images/menu-profile.svg", :alt => "profile"}/
@@ -42,29 +48,69 @@
                   %li
                     %img{:src => "./images/droppa-thumb.png", :alt => ""}/
                     %h3 DROPPA
-                    %p バックオフィスの仕事の効率化を支援するサービス。
+                    %p
+                      バックオフィスの仕事の効率化を支援するサービス。
+                      .comment.text-gray 非生産的な仕事を企業から消し去るのが目標です。
                   %li
                     %img{:src => "./images/ruc-thumb.png", :alt => ""}/
                     %h3 RUC株式会社
-                    %p RUC株式会社、コーポレートサイト。
+                    %p
+                      RUC株式会社、コーポレートサイト。
+                      %br/
+                      .comment.text-gray TOPページがメンバーのチャットになっていて、近況報告がてらたまに更新します。
                   %li
                     %img{:src => "./images/tsukkomi-thumb.png", :alt => ""}/
                     %h3
                       ツッコミ.me
-                    %p 伝説の名ツッコミを投稿、共有する、極上の暇つぶし空間。
+                    %p
+                      伝説の名ツッコミを投稿、共有する、極上の暇つぶし空間。
+                      %br/
+                      .comment.text-gray 開発合宿にて作りました。ひたすらに、自分の好きなツッコミを投稿するサービスです。
                   %li
                     %img{:src => "./images/thanks-thumb.png", :alt => ""}/
                     %h3 Thanks
-                    %p 日々の感謝を投稿するSNS。毎日連続で投稿すると、つぼみに花が咲きます。
+                    %p
+                      日々の感謝を投稿するSNS。毎日連続で投稿すると、つぼみに花が咲きます。
+                      %br/
+                      .comment.text-gray サービスの設計から関わって、作っても使っても幸福度が上がるサービス。
                   %li
                     %img{:src => "./images/tech-drill.png", :alt => ""}/
                     %h3 TechDRILL
-                    %p あなたのプログラミングスキルを、一歩先へ。初心者向けプログラミング問題集。
+                    %p
+                      あなたのプログラミングスキルを、一歩先へ。初心者向けプログラミング問題集。
+                      %br/
+                      .comment.text-gray いまだにこれを見て勉強することがあります。
+                  %li
+                    %img{:src => "./images/vrarrangement-thumb.png", :alt => ""}/
+                    %h3 VR/ARrangement
+                    %p
+                      VR開発の依頼者と開発者をマッチングする開発プラットフォーム
+                      %br/
+                      .comment.text-gray VR感と信頼感をバランスよく組み合わせてく作りました。
+                  %li
+                    %img{:src => "./images/vr-expert-thumb.png", :alt => ""}/
+                    %h3 TECH::CAMP Game Engineer
+                    %p ３ヶ月でプロのゲームエンジニアを目指すコース
     %footer.footer
       .footer__inner.text-center
         %p.footer__text copyright 2017 ryosukemaehira.com
         %a{:href => "//www.facebook.com/ryosuke.maehira?ref=br_rs", :target => 'blanc'}
-          %i.fa.fa-facebook-official facebook
-        %a{:href => "//twitter.com/tabi_ryosuke"}
-          %i.fa.fa-twitter Twitter
+          %i.fa.fa-facebook-official
+          facebook
+        %a{:href => "//twitter.com/tabi_ryosuke", :target => 'blanc'}
+          %i.fa.fa-twitter
+          Twitter
 
+
+  :javascript
+    console.log("hoge")
+    var navigation = document.getElementById("js-havigation-sm");
+    var trigger = document.getElementById("js-havigation-trigger");
+    trigger.addEventListener("click",
+      function() {
+        console.log("hogehogehoge");
+        console.log(navigation);
+        navigation.classList.toggle("open");
+        trigger.classList.toggle("closeBtn");
+      }
+    );

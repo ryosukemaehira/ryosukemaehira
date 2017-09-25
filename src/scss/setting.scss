@@ -16,6 +16,8 @@ body, html {
 
 html {
   font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -26,7 +28,7 @@ body {
 
 @media(max-width: 767px) {
   html {
-    font-size: 50%;
+    font-size: 55%;
   }
 }
 
@@ -34,7 +36,7 @@ body {
   font-size: 1.4rem;
   color: $text-color;
   line-height: 1.7;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.08em;
 }
 
 body * {
@@ -88,7 +90,7 @@ a {
   cursor: pointer;
 
   &:hover {
-  
+    opacity: 0.7;
   }
 }
 
